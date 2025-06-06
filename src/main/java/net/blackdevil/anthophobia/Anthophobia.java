@@ -2,7 +2,6 @@ package net.blackdevil.anthophobia;
 
 import com.mojang.logging.LogUtils;
 import net.blackdevil.anthophobia.block.ModBlocks;
-import net.blackdevil.anthophobia.component.ModDataComponents;
 import net.blackdevil.anthophobia.effect.ModEffects;
 import net.blackdevil.anthophobia.enchantment.ModEnchantmentEffects;
 import net.blackdevil.anthophobia.item.ModCreativeModeTabs;
@@ -15,7 +14,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -38,7 +36,6 @@ public class Anthophobia {
        // ModItems.refister(modEventBus);
         ModBlocks.register(modEventBus);
 
-        ModDataComponents.register(modEventBus);
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
 
