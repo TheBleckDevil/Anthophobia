@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "anthophobia:block/foxglove_block_bottom"
+    },
+    "half=upper": {
+      "model": "anthophobia:block/foxglove_block_top"
+    }
+  }
+}

@@ -37,11 +37,13 @@ public class DataGenerators {
 
         generator.addProvider(event.includeServer(), new ModDataMapProvider(packOutput, lookupProvider));
 
-// ✅ Only register ModBlockStateProvider once
+        // Register your block model provider first
+        generator.addProvider(event.includeClient(), new ModBlockModelProvider(packOutput, Anthophobia.MODID, existingFileHelper));
+
+        // Then register the block state provider
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
 
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
-
     }
 }
