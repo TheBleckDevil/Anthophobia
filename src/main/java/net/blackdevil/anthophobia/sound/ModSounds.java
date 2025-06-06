@@ -21,14 +21,6 @@ public class ModSounds {
 
 
 
-    private static ResourceKey<JukeboxSong> createSong(String name) {
-        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(Anthophobia.MODID, name));
-    }
-    private static Supplier<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Anthophobia.MODID, name);
-        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
-    }
-
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
     }

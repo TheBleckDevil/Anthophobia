@@ -1,6 +1,0 @@
-{
-  "parent": "block/flower_double_bottom",
-  "textures": {
-    "cross": "anthophobia:block/foxglove"
-  }
-}

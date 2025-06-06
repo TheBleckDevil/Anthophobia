@@ -1,5 +1,8 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
-  "item.examplemod.example_item": "Example Item"
+  "creativetab.anthophobia.flowers_tab": "Flowers",
+  "block.anthophobia.foxglove_block": "Foxglove",
+  "item.anthophobia.foxglove": "Foxglove",
+
+  "item.anthophobia.chisa": "Chisa",
+  "block.anthophobia.chisa_block": "Chisa"
 }

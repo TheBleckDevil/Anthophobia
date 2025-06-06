@@ -21,16 +21,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         super(output, registries);
     }
 
-    @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
 
-    }
-
-    protected static <T extends AbstractCookingRecipe> void oreCooking(RecipeOutput recipeOutput, RecipeSerializer<T> pCookingSerializer, AbstractCookingRecipe.Factory<T> factory,
-                                                                       List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        for(ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(recipeOutput, Anthophobia.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
-        }
-    }
 }
