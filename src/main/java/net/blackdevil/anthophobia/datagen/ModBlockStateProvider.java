@@ -10,18 +10,21 @@ import net.minecraft.world.level.block.TallFlowerBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Anthophobia.MODID, exFileHelper);
+        crossFlower(ModBlocks.LYCORIS_RADIATA_BLOCK.get(), "lycoris_radiata");
+
     }
 
     @Override
     protected void registerStatesAndModels() {
         tallFlower(ModBlocks.FOXGLOVE_BLOCK.get(), "foxglove_block");
 
-        simpleBlock(ModBlocks.CHISA_BLOCK.get(), models().getBuilder("chisa_block"));
     }
 
     private void tallFlower(Block block, String name) {
@@ -36,5 +39,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .modelForState()
                 .modelFile(models().cross(name + "_top", modLoc("block/" + name + "_top")))
                 .addModel();
+
+        private void crossFlower(Block block, String name){
+            getVariantBuilder(block)
+                    .partialState()
+                    .modelForState()
+                    .modelFile(models().cross(name, modLoc("block/" + name)))
+                    .addModel();
+
+
+        }
     }
 }
