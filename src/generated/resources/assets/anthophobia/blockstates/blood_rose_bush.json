@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "anthophobia:block/blood_rose_bush_bottom"
+    },
+    "half=upper": {
+      "model": "anthophobia:block/blood_rose_bush_top"
+    }
+  }
+}

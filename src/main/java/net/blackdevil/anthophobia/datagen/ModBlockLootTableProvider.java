@@ -29,12 +29,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        addFoxgloveLootTable(ModBlocks.FOXGLOVE_BLOCK.get());
+        addDoubleBlockLootTable(ModBlocks.FOXGLOVE_BLOCK.get());
         dropSelf(ModBlocks.CHISA_BLOCK.get());
         dropSelf(ModBlocks.LYCORIS_RADIATA_BLOCK.get());
+        dropSelf(ModBlocks.BLOOD_ROSE.get());
+        addDoubleBlockLootTable(ModBlocks.BLOOD_ROSE_BUSH.get());
     }
 
-    private void addFoxgloveLootTable(Block block) {
+
+
+    private void addDoubleBlockLootTable(Block block) {
         LootPool.Builder pool = LootPool.lootPool()
                 .setRolls(UniformGenerator.between(1.0F, 1.0F))
                 .add(LootItem.lootTableItem(block.asItem())
@@ -53,12 +57,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(block, table);
     }
 
+
+
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return Set.of(
                 ModBlocks.FOXGLOVE_BLOCK.get(),
                 ModBlocks.CHISA_BLOCK.get(),
-                ModBlocks.LYCORIS_RADIATA_BLOCK.get()
+                ModBlocks.LYCORIS_RADIATA_BLOCK.get(),
+                ModBlocks.BLOOD_ROSE.get(),
+                ModBlocks.BLOOD_ROSE_BUSH.get()
         );
     }
 }

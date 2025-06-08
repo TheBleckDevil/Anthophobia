@@ -16,5 +16,7 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.FOXGLOVE_BLOCK.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHISA_BLOCK.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LYCORIS_RADIATA_BLOCK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_ROSE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_ROSE_BUSH.get(), RenderType.cutout());
     }
 }

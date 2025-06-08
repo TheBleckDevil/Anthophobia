@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "anthophobia:item/blood_rose_bush_item"
+  }
+}

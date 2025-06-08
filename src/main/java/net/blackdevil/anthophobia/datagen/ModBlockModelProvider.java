@@ -27,6 +27,15 @@ public class ModBlockModelProvider extends BlockModelProvider {
         withExistingParent("lycoris_radiata_block", "block/cross")
                 .texture("cross", modLoc("block/lycoris_radiata_block"));
 
+        withExistingParent("blood_rose", "block/cross")
+                .texture("cross", modLoc("block/blood_rose"));
+
+        withExistingParent("blood_rose_bush_bottom", "block/cross")
+                .texture("cross", modLoc("block/blood_rose_bush_bottom"));
+
+        withExistingParent("blood_rose_bush_top", "block/cross")
+                .texture("cross", modLoc("block/blood_rose_bush_top"));
+
         }
     }
 

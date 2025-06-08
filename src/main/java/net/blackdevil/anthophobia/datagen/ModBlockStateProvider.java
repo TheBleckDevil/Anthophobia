@@ -26,6 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         tallFlower(ModBlocks.FOXGLOVE_BLOCK.get(), "foxglove_block");
         crossFlower(ModBlocks.LYCORIS_RADIATA_BLOCK.get(), "lycoris_radiata_block");
+        crossFlower(ModBlocks.BLOOD_ROSE.get(), "blood_rose");
+        tallFlower(ModBlocks.BLOOD_ROSE_BUSH.get(), "blood_rose_bush");
 
     }
 

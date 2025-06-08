@@ -1,6 +1,11 @@
-// 1.21.1	2025-06-08T02:42:52.867716	Block States: anthophobia
+// 1.21.1	2025-06-09T00:52:36.0438996	Block States: anthophobia
+de53a65185fbae2ba3a4695a0ec75a1080917915 assets/anthophobia/blockstates/blood_rose.json
+5e024b0e79f38e75fe1737e7d59c2b1070a10674 assets/anthophobia/blockstates/blood_rose_bush.json
 4bad08bb668076025def1bdd03db774507032c47 assets/anthophobia/blockstates/foxglove_block.json
 aa59141925ad16b6492886757504aafcf91df2d6 assets/anthophobia/blockstates/lycoris_radiata_block.json
+5bb0166556069db5aef011b792402527869ff2f2 assets/anthophobia/models/block/blood_rose.json
+875601e4a0961621622f17c1a0c76fc862a9fa4c assets/anthophobia/models/block/blood_rose_bush_bottom.json
+d5049986a1f2a5a5d5c29d23fe128758c9ea8e56 assets/anthophobia/models/block/blood_rose_bush_top.json
 e62c2a7aa78d35746596fb83a7593d37340390cb assets/anthophobia/models/block/foxglove_block_bottom.json
 df56aa71949e2b76aaccadc4016f0a49127c774d assets/anthophobia/models/block/foxglove_block_top.json
 9751e5ee4ad2092bd3977891c169c357f08cc381 assets/anthophobia/models/block/lycoris_radiata_block.json

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "anthophobia:block/blood_rose_bush_top"
+  }
+}

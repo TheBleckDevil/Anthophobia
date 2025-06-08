@@ -7,6 +7,12 @@
   "item.anthophobia.chisa": "Chisa",
   "block.anthophobia.chisa_block": "Chisa",
 
-  "item.anthophobia.lycoris_radiata": "Lycoris Radia",
-  "block.anthophobia.lycoris_radiata_block": "Lycoris Radiata"
+  "item.anthophobia.lycoris_radiata": "Lycoris Radiata",
+  "block.anthophobia.lycoris_radiata_block": "Lycoris Radiata",
+
+  "item.anthophobia.blood_rose_item": "Blood Rose",
+  "block.anthophobia.blood_rose": "Blood Rose",
+
+  "item.anthophobia.blood_rose_bush_item": "Blood Rose Bush",
+  "block.anthophobia.blood_rose_bush": "Blood Rose Bush"
 }

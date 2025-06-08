@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "anthophobia:blood_rose_bush_item"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "anthophobia:blood_rose_item"
+  }
+}

@@ -23,6 +23,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FOXGLOVE);
                         output.accept(ModItems.CHISA);
                         output.accept(ModItems.LYCORIS_RADIATA);
+                        output.accept(ModItems.BLOOD_ROSE_ITEM);
+                        output.accept(ModItems.BLOOD_ROSE_BUSH_ITEM);
 
 
 

@@ -46,6 +46,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FOXGLOVE.get());
         basicItem(ModItems.CHISA.get());
         basicItem(ModItems.LYCORIS_RADIATA.get());
+        basicItem(ModItems.BLOOD_ROSE_BUSH_ITEM.get());
     }
 }
 
