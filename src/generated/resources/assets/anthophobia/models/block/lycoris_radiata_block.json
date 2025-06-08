@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "anthophobia:block/lycoris_radiata_block",
+    "0": "anthophobia:block/lycoris_radiata_block",
+    "particle": "#0"
+  }
+}

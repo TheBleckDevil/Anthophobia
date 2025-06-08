@@ -1,8 +1,12 @@
 {
   "creativetab.anthophobia.flowers_tab": "Flowers",
+
   "block.anthophobia.foxglove_block": "Foxglove",
   "item.anthophobia.foxglove": "Foxglove",
 
   "item.anthophobia.chisa": "Chisa",
-  "block.anthophobia.chisa_block": "Chisa"
+  "block.anthophobia.chisa_block": "Chisa",
+
+  "item.anthophobia.lycoris_radiata": "Lycoris Radia",
+  "block.anthophobia.lycoris_radiata_block": "Lycoris Radiata"
 }

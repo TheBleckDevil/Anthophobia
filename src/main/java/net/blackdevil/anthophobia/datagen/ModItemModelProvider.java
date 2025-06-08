@@ -45,7 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.FOXGLOVE.get());
         basicItem(ModItems.CHISA.get());
-        basicItem(ModItems.LYCORIS_RADIATA);
+        basicItem(ModItems.LYCORIS_RADIATA.get());
     }
 }
 

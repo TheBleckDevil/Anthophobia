@@ -31,6 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         addFoxgloveLootTable(ModBlocks.FOXGLOVE_BLOCK.get());
         dropSelf(ModBlocks.CHISA_BLOCK.get());
+        dropSelf(ModBlocks.LYCORIS_RADIATA_BLOCK.get());
     }
 
     private void addFoxgloveLootTable(Block block) {
@@ -56,7 +57,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         return Set.of(
                 ModBlocks.FOXGLOVE_BLOCK.get(),
-                ModBlocks.CHISA_BLOCK.get()
+                ModBlocks.CHISA_BLOCK.get(),
+                ModBlocks.LYCORIS_RADIATA_BLOCK.get()
         );
     }
 }

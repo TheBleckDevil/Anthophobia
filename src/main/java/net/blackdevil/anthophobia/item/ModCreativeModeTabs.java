@@ -22,7 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.FOXGLOVE);
                         output.accept(ModItems.CHISA);
-                        output.accept(ModItems.;LYC);
+                        output.accept(ModItems.LYCORIS_RADIATA);
 
 
 
