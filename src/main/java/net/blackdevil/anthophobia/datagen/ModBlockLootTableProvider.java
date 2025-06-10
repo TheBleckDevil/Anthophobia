@@ -30,7 +30,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         addDoubleBlockLootTable(ModBlocks.FOXGLOVE_BLOCK.get());
-        dropSelf(ModBlocks.CHISA_BLOCK.get());
         dropSelf(ModBlocks.LYCORIS_RADIATA_BLOCK.get());
         dropSelf(ModBlocks.BLOOD_ROSE.get());
         addDoubleBlockLootTable(ModBlocks.BLOOD_ROSE_BUSH.get());
@@ -63,7 +62,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         return Set.of(
                 ModBlocks.FOXGLOVE_BLOCK.get(),
-                ModBlocks.CHISA_BLOCK.get(),
                 ModBlocks.LYCORIS_RADIATA_BLOCK.get(),
                 ModBlocks.BLOOD_ROSE.get(),
                 ModBlocks.BLOOD_ROSE_BUSH.get()

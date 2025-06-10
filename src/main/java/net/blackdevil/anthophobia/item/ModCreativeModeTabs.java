@@ -1,6 +1,7 @@
 package net.blackdevil.anthophobia.item;
 
 import net.blackdevil.anthophobia.Anthophobia;
+import net.blackdevil.anthophobia.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -25,7 +26,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LYCORIS_RADIATA);
                         output.accept(ModItems.BLOOD_ROSE_ITEM);
                         output.accept(ModItems.BLOOD_ROSE_BUSH_ITEM);
-
+                        output.accept(ModItems.WITHERED_GRASS);
 
 
 

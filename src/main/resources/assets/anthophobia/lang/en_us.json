@@ -14,5 +14,8 @@
   "block.anthophobia.blood_rose": "Blood Rose",
 
   "item.anthophobia.blood_rose_bush_item": "Blood Rose Bush",
-  "block.anthophobia.blood_rose_bush": "Blood Rose Bush"
+  "block.anthophobia.blood_rose_bush": "Blood Rose Bush",
+
+  "block.anthophobia.withered_grass": "Withered Grass Block",
+  "items.anthophobia.withered_grass_item": "Withered Grass Block"
 }

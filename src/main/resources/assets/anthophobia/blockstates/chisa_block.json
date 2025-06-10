@@ -1,5 +1,17 @@
+
 {
   "variants": {
-    "": { "model": "anthophobia:block/chisa_block" }
+    "chisas=1": {
+      "model": "anthophobia:block/chisa_block_1"
+    },
+    "chisas=2": {
+      "model": "anthophobia:block/chisa_block_2"
+    },
+    "chisas=3": {
+      "model": "anthophobia:block/chisa_block_3"
+    },
+    "chisas=4": {
+      "model": "anthophobia:block/chisa_block_4"
+    }
   }
 }

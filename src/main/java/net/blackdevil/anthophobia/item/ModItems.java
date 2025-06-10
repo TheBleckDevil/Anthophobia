@@ -22,6 +22,8 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.BLOOD_ROSE.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> BLOOD_ROSE_BUSH_ITEM = ITEMS.register("blood_rose_bush_item",
             () -> new BlockItem(ModBlocks.BLOOD_ROSE_BUSH.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> WITHERED_GRASS = ITEMS.register("withered_grass",
+            () -> new BlockItem(ModBlocks.WITHERED_GRASS.get(), new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
