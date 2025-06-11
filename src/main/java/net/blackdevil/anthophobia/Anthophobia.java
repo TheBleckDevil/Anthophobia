@@ -8,7 +8,7 @@ import net.blackdevil.anthophobia.item.ModCreativeModeTabs;
 import net.blackdevil.anthophobia.item.ModItems;
 import net.blackdevil.anthophobia.potion.ModPotions;
 import net.blackdevil.anthophobia.sound.ModSounds;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -42,11 +42,14 @@ public class Anthophobia {
         ModPotions.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
 
+
         modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Your common setup code here
+        event.enqueueWork(() -> {
+            // 👇 Call your custom bootstrap class to link features
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -69,5 +72,6 @@ public class Anthophobia {
         public static void onClientSetup(FMLCommonSetupEvent event) {
             // Client setup code here (e.g., item properties)
         }
+
     }
 }

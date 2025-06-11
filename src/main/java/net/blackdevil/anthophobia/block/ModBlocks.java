@@ -48,6 +48,17 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WITHERED_GRASS = BLOCKS.register("withered_grass",
             () -> new WitheredGrass(BlockBehaviour.Properties.of().sound(SoundType.GRASS).randomTicks().explosionResistance(0.6f)));
 
+    public static final DeferredBlock<Block> WITHERED_LOG = BLOCKS.register("withered_log",
+            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final DeferredBlock<Block> WITHERED_PLANKS = BLOCKS.register("withered_planks",
+            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final DeferredBlock<Block> WITHERED_WOOD = BLOCKS.register("withered_wood",
+            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final DeferredBlock<Block> STRIPPED_WITHERED_LOG = BLOCKS.register("stripped_withered_log",
+            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final DeferredBlock<Block> STRIPPED_WITHERED_WOOD = BLOCKS.register("stripped_withered_wood",
+            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+
 
 
 
