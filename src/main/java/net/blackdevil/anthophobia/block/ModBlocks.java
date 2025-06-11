@@ -3,6 +3,8 @@ package net.blackdevil.anthophobia.block;
 import com.mojang.blaze3d.shaders.Effect;
 import net.blackdevil.anthophobia.Anthophobia;
 import net.blackdevil.anthophobia.block.custom.*;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -13,8 +15,10 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -49,21 +53,33 @@ public class ModBlocks {
             () -> new WitheredGrass(BlockBehaviour.Properties.of().sound(SoundType.GRASS).randomTicks().explosionResistance(0.6f)));
 
     public static final DeferredBlock<Block> WITHERED_LOG = BLOCKS.register("withered_log",
-            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
-    public static final DeferredBlock<Block> WITHERED_PLANKS = BLOCKS.register("withered_planks",
-            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredBlock<Block> WITHERED_WOOD = BLOCKS.register("withered_wood",
-            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
     public static final DeferredBlock<Block> STRIPPED_WITHERED_LOG = BLOCKS.register("stripped_withered_log",
-            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
     public static final DeferredBlock<Block> STRIPPED_WITHERED_WOOD = BLOCKS.register("stripped_withered_wood",
-            () -> new ChisaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
 
 
 
+    public static final DeferredBlock<Block> WITHERED_PLANKS = BLOCKS.register("withered_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
 
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
 
-
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

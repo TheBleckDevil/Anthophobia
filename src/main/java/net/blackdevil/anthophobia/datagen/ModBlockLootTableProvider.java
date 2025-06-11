@@ -30,9 +30,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         addDoubleBlockLootTable(ModBlocks.FOXGLOVE_BLOCK.get());
-        dropSelf(ModBlocks.LYCORIS_RADIATA_BLOCK.get());
-        dropSelf(ModBlocks.BLOOD_ROSE.get());
+        this.dropSelf(ModBlocks.LYCORIS_RADIATA_BLOCK.get());
+        this.dropSelf(ModBlocks.BLOOD_ROSE.get());
         addDoubleBlockLootTable(ModBlocks.BLOOD_ROSE_BUSH.get());
+
+
+        this.dropSelf(ModBlocks.WITHERED_PLANKS.get());
+        this.dropSelf(ModBlocks.WITHERED_LOG.get());
+        this.dropSelf(ModBlocks.WITHERED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_WITHERED_WOOD.get());
+
     }
 
 

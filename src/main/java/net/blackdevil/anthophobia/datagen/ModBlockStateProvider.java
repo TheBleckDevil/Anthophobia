@@ -5,16 +5,14 @@ import net.blackdevil.anthophobia.block.ModBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.GrassBlock;
-import net.minecraft.world.level.block.TallFlowerBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -28,6 +26,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         crossFlower(ModBlocks.LYCORIS_RADIATA_BLOCK.get(), "lycoris_radiata_block");
         crossFlower(ModBlocks.BLOOD_ROSE.get(), "blood_rose");
         tallFlower(ModBlocks.BLOOD_ROSE_BUSH.get(), "blood_rose_bush");
+
+
+        logBlock(((RotatedPillarBlock) ModBlocks.WITHERED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.WITHERED_WOOD.get()), blockTexture(ModBlocks.WITHERED_LOG.get()), blockTexture(ModBlocks.WITHERED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_WITHERED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_WITHERED_WOOD.get()), blockTexture(ModBlocks.STRIPPED_WITHERED_LOG.get()), blockTexture(ModBlocks.STRIPPED_WITHERED_LOG.get()));
+
+        blockItem(ModBlocks.WITHERED_LOG);
+        blockItem(ModBlocks.WITHERED_WOOD);
+        blockItem(ModBlocks.STRIPPED_WITHERED_LOG);
+        blockItem(ModBlocks.STRIPPED_WITHERED_WOOD);
+
+        blockWithItem(ModBlocks.WITHERED_PLANKS);
 
     }
 
@@ -53,5 +64,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         .modelFile(models().cross(name, modLoc("block/" + name)))
                         .build()
         );
+    }
+
+    private void blockWithItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("anthophobia:block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("anthophobia:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }

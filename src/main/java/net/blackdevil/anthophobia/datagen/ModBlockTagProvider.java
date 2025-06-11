@@ -22,6 +22,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WITHERED_LOG.get())
+                .add(ModBlocks.WITHERED_WOOD.get())
+                .add(ModBlocks.STRIPPED_WITHERED_LOG.get())
+                .add(ModBlocks.STRIPPED_WITHERED_WOOD.get());
+
     }
 }
 
